@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Orbitron', sans-serif; /* Futuristic/tech feel */
+  background: #000;
+  color: #e0e0e0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Hero section with smoky gradient background */
+.hero {
+  position: relative;
+  height: 100vh;
+  min-height: 800px;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a001a 50%, #000033 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(50,0,100,0.15) 0%, transparent 70%);
+  pointer-events: none;
+  animation: smoke 20s infinite alternate ease-in-out;
+}
+
+@keyframes smoke {
+  0% { opacity: 0.4; transform: scale(1); }
+  100% { opacity: 0.7; transform: scale(1.15); }
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.logo-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  font-style: italic;
+  letter-spacing: -0.05em;
+  color: #f0f0f0;
+  text-shadow: 0 0 30px rgba(200,100,255,0.6), 0 0 60px rgba(100,0,200,0.4);
+  animation: glow 4s infinite alternate;
+}
+
+.subtitle {
+  font-size: 2.5rem;
+  letter-spacing: 0.5em;
+  color: #888;
+  margin-top: -1rem;
+}
+
+.diamond-symbol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.8);
+  width: 300px;
+  height: 300px;
+  opacity: 0.15;
+  z-index: -1;
+  filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
+}
+
+.tagline {
+  font-size: 1.8rem;
+  margin: 2rem 0 3rem;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 1rem 3rem;
+  background: transparent;
+  border: 2px solid #a050ff;
+  color: #d0b0ff;
+  font-size: 1.3rem;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  transition: all 0.4s;
+}
+
+.cta-button:hover {
+  background: rgba(160,80,255,0.15);
+  box-shadow: 0 0 40px rgba(160,80,255,0.5);
+  transform: scale(1.05);
+}
+
+.section {
+  padding: 8rem 2rem;
+  text-align: center;
+  background: #0a0a0a;
+}
+
+.section h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  color: #b080ff;
+  text-shadow: 0 0 20px rgba(176,128,255,0.5);
+}
+
+footer {
+  padding: 3rem;
+  text-align: center;
+  background: #000;
+  border-top: 1px solid #222;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Glow animation for text */
+@keyframes glow {
+  from { text-shadow: 0 0 20px rgba(200,100,255,0.4); }
+  to   { text-shadow: 0 0 50px rgba(200,100,255,0.8), 0 0 80px rgba(100,0,200,0.6); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .brand-name { font-size: 4.5rem; }
+  .subtitle { font-size: 2rem; }
+  .diamond-symbol { width: 220px; height: 220px; }
+}

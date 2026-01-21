@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>undefined MTB</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Optional: Google Fonts for a sleek look -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet"/>
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="content">
+      <div class="logo-container">
+        <!-- You can replace this with your actual logo image -->
+        <h1 class="brand-name">undefined</h1>
+        <p class="subtitle">MTB</p>
+        <!-- Double black diamond symbol as SVG for scalability -->
+        <svg class="diamond-symbol" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+          <polygon points="50,10 90,50 50,90 10,50" fill="none" stroke="#fff" stroke-width="8" filter="url(#glow)"/>
+          <polygon points="50,20 80,50 50,80 20,50" fill="none" stroke="#fff" stroke-width="6" opacity="0.6"/>
+        </svg>
+      </div>
+      <p class="tagline">Enter the unknown. Ride without limits.</p>
+      <a href="#explore" class="cta-button">Discover the Undefined</a>
+    </div>
+  </header>
+
+  <section id="explore" class="section">
+    <h2>The Drop</h2>
+    <p>undefined MTB — where trails vanish into mystery, and every line is yours to define. Expert only. No apologies.</p>
+    <!-- Add more sections later: bikes, riders, shop,tc. -->
+  </section>
+
+  <footer>
+    <p>&copy; 2026 undefined MTB. All rights reserved.</p>
+  </footer>
+</body>
+</html>
